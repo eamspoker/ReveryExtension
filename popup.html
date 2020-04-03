@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://use.typekit.net/iwl7uqk.css">
     <style>
       #screen {
         height: 200px;
@@ -9,119 +8,16 @@
         outline: none;
       }
 
-      #goButton, #awayButton {
-        outline: none;
-        background-color: #80bb5c;
-        font-family: zeitung, sans-serif;
-      }
-
-      #link{
-        outline: none;
-        background-color: #80bb5c;
-        font-family: zeitung, sans-serif;
-      }
-
-
-      #title {
-        font-family: zeitung, sans-serif;
-        font-size: 28px;
-
-      }
-
-      #thermometer{
-        font-family: zeitung, sans-serif;
-      }
-
-      #description{
-        font-family: zeitung, sans-serif;
-      }
-
-      #pointDisplay{
-        font-family: zeitung, sans-serif;
-      }
-
-    @font-face {
-      font-family: TypoGrotesk-Bold;
-      src: url("css/TypoGrotesk-Bold.woff") format("woff");
-    }
-
     </style>
   </head>
-  <link rel="stylesheet" href="css/patternfly.css">
-  <body class="menu">
-
-    <div id="screen">
-    <div class="pf-c-card" id="card-action-example-1">
-  <div class="pf-c-card__head">
-    <div class="pf-c-card__head-main">
-      <img src="images/logo.svg" width= "200px" alt="Logo"/>
-    </div>
-    <div class="pf-c-card__actions">
-      <div class="pf-l-stack">
-      <div class="pf-l-split__item">
-    <div class="pf-l-split">
-  <div class="pf-l-split__item"><i class="pf-icon pf-icon-zone"></i></div>
-  <div class="pf-l-split__item pf-m-fill"><div class="pf-l-level__item" id="pointDisplay">Points: (Refresh)</div></div>
-  </div>
-</div>
-</div>
+  <body id="screen">
 
 
-      <div class="pf-c-dropdown">
-        <ul class="pf-c-dropdown__menu" aria-labelledby="card-action-example-1-dropdown-kebab-right-aligned-button" hidden>
-          <li>
-            <a class="pf-c-dropdown__menu-item" href="#">Link</a>
-          </li>
-          <li>
-            <button class="pf-c-dropdown__menu-item" type="button">Action</button>
-          </li>
-          <li>
-            <a class="pf-c-dropdown__menu-item pf-m-disabled" href="#" aria-disabled="true" tabindex="-1">Disabled link</a>
-          </li>
-          <li>
-            <button class="pf-c-dropdown__menu-item" type="button" disabled>Disabled action</button>
-          </li>
-          <li class="pf-c-dropdown__separator" role="separator"></li>
-          <li>
-            <a class="pf-c-dropdown__menu-item" href="#">Separated link</a>
-          </li>
-        </ul>
-      </div>
+<button id="activate">Activate</button>
 
-    </div>
-  </div>
-  <div class="pf-c-card__header pf-c-title pf-m-md" id="card-action-example-1-check-label">
-
-
-    <div class="pf-l-level">
-  <div class="pf-l-level__item"><h1 id="title">Environmental Fact-Check</h1></div>
-</div>
-
-  </div>
-  <div class="pf-c-card__body">
-  <div class="pf-l-stack pf-m-gutter">
-  <div class="pf-l-stack__item" ><i class="pf-icon pf-icon-project"></i><p id="thermometer">Reliability: </p></div>
-  <div class="pf-l-stack__item pf-m-fill"><p id="description"></p></div>
-  </div>
-</div>
-  <div class="pf-c-card__footer">
-    <div class="pf-l-level">
-  <div class="pf-l-level__item"><button class="pf-c-button pf-m-primary" id="goButton">Check Page</button></div>
-  <div class="pf-l-stack__item"><button class="pf-c-button pf-m-primary" id="awayButton">Visit Our Website</button></div>
-  </div>
-</div>
-
-  </div>
-</div>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
-
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
-<script type="text/javascript" src="signin.js"></script>
 <script type="text/javascript" src="popup.js"></script>
 
-</div>
+</body>
+
+
 </html>

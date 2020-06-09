@@ -19,7 +19,19 @@
 
   "page_action": {
     "default_popup": "popup.html"
-  }
+  },
+
+  "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+      ]
 
 
 }

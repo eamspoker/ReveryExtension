@@ -1,15 +1,25 @@
 var name = document.location.host;
 
+var startTime;
+var updatedTime;
+var difference;
+var tInterval;
+var savedTime;
+
+function pauseTimer(){
+  if (!difference){
+    // if timer never started, don't allow pause button to do anything
+  } else if (!paused) {
+    clearInterval(tInterval);
+    savedTime = difference;
+    paused = 1;
+    running = 0;
+  }
+}
+
 if(name == "eamspoker.github.io"){
   var timer = document.getElementById('timer');
   var saved = document.getElementById('saved');
-  var startTime;
-  var updatedTime;
-  var difference;
-  var tInterval;
-  var savedTime = chrome.storage.sync.get(['time_spent'], function(value) {
-    return value.time_spent;
-  });;
 
 
 
@@ -17,6 +27,11 @@ if(name == "eamspoker.github.io"){
     function startTimer(){
       startTime = new Date().getTime();
       tInterval = setInterval(getShowTime, 1);
+      paused = 0;
+      running = 1;
+      chrome.storage.sync.get(['time_spent'], function(value) {
+        savedTime = value.time_spent;
+      });;
   }
 
   function getShowTime(){
@@ -34,9 +49,7 @@ if(name == "eamspoker.github.io"){
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
     timer.textContent = hours + ':' + minutes + ':' + seconds;
-
     chrome.storage.sync.set({time_spent: difference}, function() {
-      console.log("time is set");
     });
 
 
@@ -45,5 +58,4 @@ if(name == "eamspoker.github.io"){
 
   startTimer();
 
-
-}
+} 
